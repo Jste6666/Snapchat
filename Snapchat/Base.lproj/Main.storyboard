@@ -94,11 +94,78 @@
                                 <action selector="logoutTapped:" destination="Gn4-s9-uuX" id="SwR-Lt-hk5"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Woo-6v-LUq">
+                            <connections>
+                                <segue destination="Fcx-4L-ZfC" kind="show" id="VSq-SF-7WS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uV-2R-gYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1721" y="106"/>
+        </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="Pns-Ex-OBO">
+            <objects>
+                <viewController id="Fcx-4L-ZfC" customClass="PictureViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9x1-ap-hZx"/>
+                        <viewControllerLayoutGuide type="bottom" id="H7j-i7-xIX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lvo-T3-dKl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VdO-ai-5V0">
+                                <rect key="frame" x="62.5" y="84" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Iag-Vz-8mb"/>
+                                    <constraint firstAttribute="height" constant="150" id="Nou-AA-NMn"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9cw-JC-C6D">
+                                <rect key="frame" x="62.5" y="254" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvn-Rb-pBi">
+                                <rect key="frame" x="166" y="304" width="42" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="Fcx-4L-ZfC" eventType="touchUpInside" id="i7k-PC-HB2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VdO-ai-5V0" firstAttribute="centerX" secondItem="lvo-T3-dKl" secondAttribute="centerX" id="DTo-cF-1PM"/>
+                            <constraint firstItem="9cw-JC-C6D" firstAttribute="width" secondItem="VdO-ai-5V0" secondAttribute="width" id="jAO-LX-Neo"/>
+                            <constraint firstItem="Lvn-Rb-pBi" firstAttribute="centerX" secondItem="lvo-T3-dKl" secondAttribute="centerX" id="lWc-JH-12g"/>
+                            <constraint firstItem="9cw-JC-C6D" firstAttribute="top" secondItem="VdO-ai-5V0" secondAttribute="bottom" constant="20" id="mcC-Du-pvQ"/>
+                            <constraint firstItem="VdO-ai-5V0" firstAttribute="top" secondItem="9x1-ap-hZx" secondAttribute="bottom" constant="20" id="o19-a2-rIu"/>
+                            <constraint firstItem="Lvn-Rb-pBi" firstAttribute="top" secondItem="9cw-JC-C6D" secondAttribute="bottom" constant="20" id="ozF-ce-Mns"/>
+                            <constraint firstItem="9cw-JC-C6D" firstAttribute="centerX" secondItem="lvo-T3-dKl" secondAttribute="centerX" id="q81-wc-n7H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OZm-6b-N5K">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="qi3-to-j2S">
+                            <connections>
+                                <action selector="cameraTapped:" destination="Fcx-4L-ZfC" id="aI4-y9-RTH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="9cw-JC-C6D" id="ZRC-dU-M7R"/>
+                        <outlet property="imageView" destination="VdO-ai-5V0" id="FuD-MN-usa"/>
+                        <outlet property="nextButton" destination="Lvn-Rb-pBi" id="BAg-Vp-NCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWZ-dr-5GH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2433" y="106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7nQ-3m-cBb">
