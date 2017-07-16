@@ -117,8 +117,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VdO-ai-5V0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VdO-ai-5V0">
                                 <rect key="frame" x="62.5" y="84" width="250" height="150"/>
+                                <color key="backgroundColor" red="0.83725307642487046" green="0.83725307642487046" blue="0.83725307642487046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Iag-Vz-8mb"/>
                                     <constraint firstAttribute="height" constant="150" id="Nou-AA-NMn"/>
@@ -161,11 +162,45 @@
                         <outlet property="descriptionTextField" destination="9cw-JC-C6D" id="ZRC-dU-M7R"/>
                         <outlet property="imageView" destination="VdO-ai-5V0" id="FuD-MN-usa"/>
                         <outlet property="nextButton" destination="Lvn-Rb-pBi" id="BAg-Vp-NCe"/>
+                        <segue destination="vkr-6I-ID8" kind="show" identifier="selectusersegue" id="lbv-um-SVC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWZ-dr-5GH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2433" y="106"/>
+        </scene>
+        <!--Select User View Controller-->
+        <scene sceneID="ffD-uG-lS0">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vkr-6I-ID8" customClass="SelectUserViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fo6-qL-BVj"/>
+                        <viewControllerLayoutGuide type="bottom" id="bVd-ID-YkH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vlg-bd-7iS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YkV-Ku-DhM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bVd-ID-YkH" firstAttribute="top" secondItem="YkV-Ku-DhM" secondAttribute="bottom" id="P1b-YP-c4t"/>
+                            <constraint firstItem="YkV-Ku-DhM" firstAttribute="leading" secondItem="vlg-bd-7iS" secondAttribute="leading" id="QOE-lq-vYV"/>
+                            <constraint firstItem="YkV-Ku-DhM" firstAttribute="top" secondItem="fo6-qL-BVj" secondAttribute="bottom" id="rTU-DN-c7g"/>
+                            <constraint firstAttribute="trailing" secondItem="YkV-Ku-DhM" secondAttribute="trailing" id="sfi-aG-esG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="YkV-Ku-DhM" id="vlv-cd-Tp1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fds-ah-xfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3163" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7nQ-3m-cBb">
