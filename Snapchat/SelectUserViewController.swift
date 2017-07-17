@@ -18,6 +18,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     var imageURL = ""
     var descrip = ""
+    var uuid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         let user = users[indexPath.row]
         
-        let snap = ["from":user.email, "description":descrip, "imageURL":imageURL]
+        let snap = ["from":user.email, "description":descrip, "imageURL":imageURL, "uuid":uuid]
         
         Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
         
