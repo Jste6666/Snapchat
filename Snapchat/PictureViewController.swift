@@ -26,6 +26,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Do any additional setup after loading the view.
         imagePicker.delegate = self
         nextButton.isEnabled = false
+        
+        view.backgroundColor = UIColor (red: 214.0/255.0, green: 248.0/255.0, blue: 252/255.0, alpha: 1.0)
     }
 
     @IBAction func cameraTapped(_ sender: Any) {

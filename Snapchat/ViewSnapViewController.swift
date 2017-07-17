@@ -28,6 +28,8 @@ class ViewSnapViewController: UIViewController {
         label.text = snap.descrip
         
         imageView.sd_setImage(with: URL(string: snap.imageURL))
+        
+        view.backgroundColor = UIColor (red: 214.0/255.0, green: 248.0/255.0, blue: 252/255.0, alpha: 1.0)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

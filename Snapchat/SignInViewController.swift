@@ -23,6 +23,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         passwordFailLabel.isEnabled = false
         passwordTextField.isSecureTextEntry = true
+        
+        view.backgroundColor = UIColor (red: 214.0/255.0, green: 248.0/255.0, blue: 252/255.0, alpha: 1.0)
+
 
     }
     

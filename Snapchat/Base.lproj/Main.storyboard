@@ -71,7 +71,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.83725307640000002" green="0.83725307640000002" blue="0.83725307640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QfG-a5-Jd9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3GH-kR-uIn"/>
                             <constraint firstItem="F1X-sU-wqI" firstAttribute="top" secondItem="QfG-a5-Jd9" secondAttribute="bottom" constant="10" id="6oS-4M-Nhb"/>
@@ -169,7 +168,6 @@
                                 <rect key="frame" x="26" y="74" width="323" height="552"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83725307640000002" green="0.83725307640000002" blue="0.83725307640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="El6-Ul-CSO" secondAttribute="trailing" constant="10" id="5We-by-LlL"/>
                             <constraint firstItem="El6-Ul-CSO" firstAttribute="leading" secondItem="500-kq-2Bz" secondAttribute="leadingMargin" constant="10" id="Bkb-Hh-J7A"/>
@@ -224,7 +222,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.83725307640000002" green="0.83725307640000002" blue="0.83725307640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VdO-ai-5V0" firstAttribute="centerX" secondItem="lvo-T3-dKl" secondAttribute="centerX" id="DTo-cF-1PM"/>
                             <constraint firstItem="9cw-JC-C6D" firstAttribute="width" secondItem="VdO-ai-5V0" secondAttribute="width" id="jAO-LX-Neo"/>

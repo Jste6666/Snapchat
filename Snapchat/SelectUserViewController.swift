@@ -28,7 +28,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.dataSource = self
         
         super.viewDidLoad()
-        self.tableView.backgroundColor = UIColor.gray
+        self.tableView.backgroundColor = UIColor (red: 214.0/255.0, green: 248.0/255.0, blue: 252/255.0, alpha: 1.0)
 
         Database.database().reference().child("users").observe(DataEventType.childAdded, with: {(snapshot) in
             print(snapshot)
@@ -46,7 +46,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor.gray
+        cell.backgroundColor = UIColor (red: 214.0/255.0, green: 248.0/255.0, blue: 252/255.0, alpha: 1.0)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

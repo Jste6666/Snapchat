@@ -25,7 +25,8 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.dataSource = self
         
         super.viewDidLoad()
-        self.tableView.backgroundColor = UIColor.lightGray
+        //
+        self.tableView.backgroundColor = UIColor (red: 214.0/255.0, green: 248.0/255.0, blue: 252/255.0, alpha: 1.0)
         
         if snaps.count > 0 {
             nosnaps = false
@@ -73,7 +74,8 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor.lightGray
+        //
+        cell.backgroundColor = UIColor (red: 214.0/255.0, green: 248.0/255.0, blue: 252/255.0, alpha: 1.0)
         
         if snaps.count > 0 {
         nosnaps = false
