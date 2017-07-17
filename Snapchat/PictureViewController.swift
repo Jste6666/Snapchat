@@ -42,7 +42,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
-        NSUUID().uuidString
+        //NSUUID().uuidString
         
         imagesFolder.child("\(uuid).jpg").putData(imageData, metadata: nil) { (metadata, error) in
             print("We tried to upload")

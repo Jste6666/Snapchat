@@ -21,7 +21,10 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-
+        
+        super.viewDidLoad()
+        self.tableView.backgroundColor = UIColor.lightGray
+        
         // Do any additional setup after loading the view.
         
         Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childAdded, with: {(snapshot) in
@@ -58,6 +61,11 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         })
     }
     
+    
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.lightGray
+    }
    
 
     @IBAction func logoutTapped(_ sender: Any) {
@@ -80,11 +88,13 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if snaps.count == 0 {
             
             cell.textLabel?.text = "You have no snaps ☹️"
-            
+        
             return cell
             
-        } else {
         
+            
+        } else {
+
         let snap = snaps[indexPath.row]
         
         cell.textLabel?.text = snap.from
@@ -95,9 +105,20 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let snap = snaps[indexPath.row]
         
-        performSegue(withIdentifier: "viewsnapsegue", sender: snap)
+        
+        let cell = UITableViewCell()
+        
+        if (cell.selectionStyle == UITableViewCellSelectionStyle.none) {
+            
+        } else {
+            
+            let snap = snaps[indexPath.row]
+        
+            performSegue(withIdentifier: "viewsnapsegue", sender: snap)
+            
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
