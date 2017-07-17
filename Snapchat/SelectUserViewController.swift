@@ -71,6 +71,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
         
+        
         navigationController!.popToRootViewController(animated: true)
     }
 

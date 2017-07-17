@@ -14,7 +14,9 @@ import FirebaseAuth
 class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var snaps : [Snap] = []
+    var nosnaps = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,13 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColor.lightGray
+        
+        if snaps.count > 0 {
+            nosnaps = false
+        } else {
+            nosnaps = true
+        }
+        
         
         // Do any additional setup after loading the view.
         
@@ -65,6 +74,13 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.lightGray
+        
+        if snaps.count > 0 {
+        nosnaps = false
+        } else {
+            nosnaps = true
+        }
+        
     }
    
 
@@ -87,6 +103,8 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if snaps.count == 0 {
             
+            nosnaps = true
+            
             cell.textLabel?.text = "You have no snaps ☹️"
         
             return cell
@@ -107,9 +125,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        let cell = UITableViewCell()
-        
-        if (cell.selectionStyle == UITableViewCellSelectionStyle.none) {
+        if nosnaps == true {
             
         } else {
             

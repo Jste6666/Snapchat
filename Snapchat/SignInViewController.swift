@@ -28,8 +28,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         passwordFailLabel.isEnabled = false
-        passwordTextField.text = ""
-        emailTextField.text = ""
         passwordTextField.isSecureTextEntry = true
     }
     
