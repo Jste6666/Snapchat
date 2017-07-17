@@ -48,13 +48,16 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
             } else {
                 print(metadata?.downloadURL() ?? "Unavailable")
                 self.nextButton.isEnabled = true
-                self.performSegue(withIdentifier: "selectusersegue", sender: nil)
+                self.performSegue(withIdentifier: "selectusersegue", sender: metadata!.downloadURL()!.absoluteString)
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        let nextVC = segue.destination as! SelectUserViewController
+        nextVC.imageURL = sender as! String
+        nextVC.descrip = descriptionTextField.text!
         
     }
     
